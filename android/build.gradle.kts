@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+
 allprojects {
     repositories {
         google()
@@ -15,8 +17,17 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
+}
+
+tasks.withType<KotlinCompilationTask<*>>().configureEach {
+    compilerOptions {
+        languageVersion.set(
+            org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0
+        )
+    }
 }
 
 tasks.register<Delete>("clean") {
