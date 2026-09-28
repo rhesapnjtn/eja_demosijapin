@@ -1,0 +1,90 @@
+name: sijapin_mobile
+description: "Aplikasi Janji Temu Pasien Online — RSUP Dr. Sitanala Tangerang (Kemenkes RI)"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Jaringan & Sesi CI3
+  dio: ^5.7.0
+  cookie_jar: ^4.0.8
+  dio_cookie_manager: ^3.1.1
+  dio_smart_retry: ^7.0.1
+
+  # Navigasi & Routing
+  go_router: ^14.2.7
+
+  # State Management & Model
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Penyimpanan & Offline
+  flutter_secure_storage: ^9.2.2
+  hive_ce_flutter: ^2.2.0
+  connectivity_plus: ^6.1.0
+  path_provider: ^2.1.5
+  path: ^1.9.0
+
+  # UI, Vektor & Kiosk APM
+  flutter_svg: ^2.0.10+1
+  qr_flutter: ^4.1.0
+  skeletonizer: ^1.4.2
+  flutter_animate: ^4.5.0
+
+  # Domain Medis, Form & Media
+  html: ^0.15.4
+  image_picker: ^1.1.2
+  flutter_image_compress: ^2.3.0
+  intl: ^0.20.0
+  mask_text_input_formatter: ^2.9.0
+  url_launcher: ^6.3.0
+  share_plus: ^10.1.4
+
+  # Notifikasi & Pengingat Lokal
+  flutter_local_notifications: ^18.0.1
+
+  # Debugger Sesi & Pemantauan Error
+  chucker_flutter: ^1.6.0
+  sentry_flutter: ^8.11.0
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  riverpod_lint: ^2.6.3
+  flutter_gen_runner: ^5.8.0
+
+  # Code Generation
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.6.3
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  hive_ce_generator: ^1.9.2
+
+  # Testing & Mocking
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  golden_toolkit: ^0.15.0
+
+  # Aset & Splash Otomatis
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/icons/

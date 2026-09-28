@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "build/**"
+    - "android/**"
+    - "ios/**"
+  language:
+    strict-casts: true       # Tolak casting implisit dari dynamic ke tipe lain
+    strict-inference: true   # Tolak inferensi variabel yang tidak jelas tipe datanya
+    strict-raw-types: true   # Wajib cantumkan tipe generic eksplisit (e.g. List<T>, Map<K,V>)
+
+linter:
+  rules:
+    - avoid_dynamic_calls         # ERROR jika mengakses fungsi/properti pada variabel dynamic
+    - cancel_subscriptions        # Mencegah kebocoran memori StreamSubscription
+    - close_sinks                 # Mencegah kebocoran memori Sink / StreamController
+    - avoid_print                 # Wajib menggunakan logger terenkripsi, dilarang print()
+    - prefer_const_constructors   # Optimasi memori widget tree
+    - always_declare_return_types # Memaksa deklarasi return type pada setiap fungsi/method
+    - unawaited_futures           # Mencegah future asinkron yang tidak di-await secara sengaja
